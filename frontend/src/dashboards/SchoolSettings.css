@@ -1,0 +1,275 @@
+
+.school-settings {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+  color: #172033;
+}
+
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.settings-eyebrow {
+  margin: 0 0 8px;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.settings-header h1 {
+  margin: 0;
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 800;
+}
+
+.settings-header p:last-child {
+  color: #64748b;
+  margin-top: 8px;
+}
+
+.settings-card {
+  margin-bottom: 24px;
+  padding: 26px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgb(15 23 42 / 4%);
+}
+
+.settings-card h2 {
+  margin: 0 0 22px;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.settings-card h3 {
+  margin: 28px 0 8px;
+  font-size: 16px;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.settings-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.settings-card input:not([type="checkbox"]),
+.settings-card select,
+.settings-card textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  color: #172033;
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.settings-card input:focus,
+.settings-card select:focus,
+.settings-card textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 12%);
+}
+
+.settings-card textarea {
+  resize: vertical;
+}
+
+.settings-help {
+  margin: 0 0 18px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.grade-row {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr 1.5fr auto;
+  align-items: end;
+  gap: 14px;
+  margin-bottom: 16px;
+  padding: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.toggle-row {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.toggle-row:last-of-type {
+  border-bottom: none;
+}
+
+.toggle-row span {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.toggle-row strong {
+  font-size: 14px;
+}
+
+.toggle-row small {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.settings-card input[type="checkbox"] {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+.full-width-field {
+  margin-top: 22px;
+}
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px 0 30px;
+}
+
+.settings-actions button,
+.secondary-button,
+.remove-grade {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.settings-actions button {
+  color: #fff;
+  background: #2563eb;
+}
+
+.settings-actions button:hover {
+  background: #1d4ed8;
+}
+
+.settings-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondary-button {
+  color: #1d4ed8;
+  background: #eff6ff;
+}
+
+.secondary-button:hover {
+  background: #dbeafe;
+}
+
+.remove-grade {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.remove-grade:hover {
+  background: #fecaca;
+}
+
+.settings-message {
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.settings-message.success {
+  color: #166534;
+  background: #dcfce7;
+  border: 1px solid #bbf7d0;
+}
+
+.settings-message.error {
+  color: #991b1b;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+}
+
+@media (max-width: 760px) {
+  .school-settings {
+    padding: 18px;
+  }
+
+  .settings-card {
+    padding: 20px;
+  }
+
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grade-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grade-row label:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .remove-grade {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 420px) {
+  .school-settings {
+    padding: 12px;
+  }
+
+  .settings-card {
+    padding: 16px;
+  }
+
+  .grade-row {
+    grid-template-columns: 1fr;
+  }
+
+  .grade-row label:nth-child(3) {
+    grid-column: auto;
+  }
+
+  .settings-actions button {
+    width: 100%;
+  }
+
+  .settings-actions {
+    justify-content: stretch;
+  }
+}
